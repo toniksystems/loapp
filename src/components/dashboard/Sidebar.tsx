@@ -10,7 +10,8 @@ import {
   X,
   ClipboardCheck,
   BarChart3,
-  ShieldCheck
+  ShieldCheck,
+  Users2
 } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
@@ -27,6 +28,7 @@ const navItems = [
 const managerNavItems = [
     { name: 'Manager Dashboard', icon: ShieldCheck, path: '/manager-dashboard' },
     { name: 'Leave Approvals', icon: ClipboardCheck, path: '/leave-approvals' },
+    { name: 'Team Calendar', icon: Users2, path: '/team-calendar' },
     { name: 'Reports', icon: BarChart3, path: '/reports' },
 ];
 
@@ -40,7 +42,7 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
-  const logoUrl = "https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/38d3/9dd7/620e6ef37bfb456fdb1e3dc3301dfdb2?Expires=1762732800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=H4GbpajizxQ2lXk-4Rs1DSzcuWOmojsjYJVglTcCNGheKXK4uGqVMu91T6YsHTQbMyzmtz1f2eH0CH7DtuZBquS98n8z4L54LVjdIaQd1hO7m3bcgudKHQ1l3z0tQiNJr2LMQQlvpltbR~zyNuQdcNBuF9yWVgiZAw3-T54Oty5ug39CXtJgP5n2x-fYLFRXPYMvBZ9XMIP2AMyQeFHPMDAm~7Ov8Ws1fNZO9NTQSnHIzg18LitnbyPNxHQSR9S~Mp0IOan4r5DCV4p0wOam65LNv4~qn02kPVUpXyRN18ZSz2ssbmKsfM0LSaLmN6WggTENbHxc3yLkd5m67w60Tg__";
+  const logoUrl = "https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/38d3/9dd7/620e6ef37bfb456fdb1e3dc3301dfdb2?Expires=1762732800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=H4GbpajizxQ2lXk-4Rs1DSzcuWOmojsjYJVglTcCNGheKXK4uGqVMu91T6YsHTQbMyzmtz1f2eH0CH7DtuZBquS98n8z4L54LVjdIaQd1hO7m3bcgudKHQ1l3z0tQiNJr2LMQQlvpltbR~zyNuQdcNBuF9yWVgiZAw3-T54Oty5ug39CXtJgP5n2x-fYLFRXPYMvBZ9XMIP2AMyQeFHPMDAm~7Ov8Ws1fNZO9NTQSnHIzg18LitnbyPNxHQSR9S~Mp0IOan4r5DCV4p0wOam65LNv4~qn02kPVUpXyRN18ZSz2ssbmKsfM0LSaLmN6WggTENbHxc3yLkd5m67w60Tg__";
 
   return (
     <>
