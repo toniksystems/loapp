@@ -1,14 +1,13 @@
-import { useState } from 'react';
+import React from 'react';
 
 const tabs = ['Pending', 'Approved', 'Rejected', 'All Request'];
 
 interface ApprovalTabsProps {
-  initialTab?: string;
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
 }
 
-const ApprovalTabs = ({ initialTab = 'Pending' }: ApprovalTabsProps) => {
-  const [activeTab, setActiveTab] = useState(initialTab);
-
+const ApprovalTabs: React.FC<ApprovalTabsProps> = ({ activeTab, setActiveTab }) => {
   return (
     <div className="flex items-center border-b border-gray-200">
       {tabs.map(tab => (
