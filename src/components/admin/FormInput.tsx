@@ -17,7 +17,7 @@ const FormInput: React.FC<FormInputProps> = ({
 }) => {
   return (
     <div>
-      <label htmlFor={id} className="block text-lg font-medium text-nimasa-dark-text mb-2">
+      <label htmlFor={id} className="block text-sm font-medium text-nimasa-dark-text mb-1.5">
         {label}
       </label>
       <input
@@ -25,7 +25,7 @@ const FormInput: React.FC<FormInputProps> = ({
         id={id}
         defaultValue={defaultValue}
         placeholder={placeholder}
-        className="w-full bg-input-bg border border-gray-400 rounded-2xl py-4 px-6 text-lg text-nimasa-dark-text focus:outline-none focus:ring-2 focus:ring-nimasa-blue"
+        className="w-full bg-input-bg border border-gray-300 rounded-lg py-2 px-4 text-sm text-nimasa-dark-text focus:outline-none focus:ring-2 focus:ring-nimasa-blue"
       />
     </div>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
 
 const EntitlementItem = ({ type, duration }: { type: string; duration: string }) => (
-  <div className="flex justify-between items-center py-2">
-    <p className="font-bold text-nimasa-dark-text text-lg">{type}</p>
-    <p className="text-gray-700 text-lg">{duration}</p>
+  <div className="flex justify-between items-center py-1.5">
+    <p className="font-bold text-nimasa-dark-text text-sm">{type}</p>
+    <p className="text-gray-700 text-sm">{duration}</p>
   </div>
 );
 
@@ -18,8 +18,8 @@ const LeaveEntitlement = () => {
   ];
 
   return (
-    <div className="bg-white rounded-3xl shadow-lg p-6">
-      <h3 className="text-2xl font-medium text-nimasa-dark-text mb-4 text-center">
+    <div className="bg-white rounded-2xl shadow-lg p-4">
+      <h3 className="text-base font-medium text-nimasa-dark-text mb-3 text-center">
         Leave Types and Entitlement
       </h3>
       <div className="divide-y divide-gray-200">

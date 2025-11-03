@@ -5,8 +5,8 @@ interface LegendItemProps {
 
 const LegendItem: React.FC<LegendItemProps> = ({ color, label }) => (
   <div className="flex items-center gap-3">
-    <div className={`h-5 w-5 rounded-full ${color}`}></div>
-    <span className="text-lg font-medium text-nimasa-dark-text">{label}</span>
+    <div className={`h-4 w-4 rounded-full ${color}`}></div>
+    <span className="text-sm font-medium text-nimasa-dark-text">{label}</span>
   </div>
 );
 
@@ -21,9 +21,9 @@ const Legend = () => {
   ];
 
   return (
-    <div className="bg-white rounded-3xl shadow-lg p-6">
-      <h3 className="text-2xl font-medium text-nimasa-dark-text mb-6">Legend</h3>
-      <div className="space-y-4">
+    <div className="bg-white rounded-2xl shadow-lg p-4">
+      <h3 className="text-base font-medium text-nimasa-dark-text mb-4">Legend</h3>
+      <div className="space-y-3">
         {legendItems.map((item, index) => (
           <LegendItem key={index} color={item.color} label={item.label} />
         ))}

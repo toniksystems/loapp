@@ -25,10 +25,10 @@ const SystemConfiguration = () => {
 
   return (
     <AdminLayout>
-      <h1 className="text-3xl md:text-5xl font-bold text-nimasa-dark-text mb-8">System Configuration</h1>
-      <div className="bg-white rounded-3xl shadow-lg p-8">
+      <h1 className="text-lg md:text-xl font-bold text-nimasa-dark-text mb-6">System Configuration</h1>
+      <div className="bg-white rounded-2xl shadow-lg p-4">
         <ConfigTabs activeTab={activeTab} setActiveTab={setActiveTab} />
-        <div className="mt-8">
+        <div className="mt-6">
           {renderContent()}
         </div>
       </div>

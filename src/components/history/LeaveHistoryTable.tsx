@@ -11,14 +11,13 @@ const leaveHistoryData = [
     { id: 'REQ-2024-0243', type: 'Annual', dates: 'Nov 10 - Nov 24, 2024', days: '14', status: 'Approved' },
     { id: 'REQ-2024-3111', type: 'Casual', dates: 'Oct 10 - Oct 14, 2024', days: '04', status: 'Approved' },
     { id: 'REQ-2024-2112', type: 'Annual', dates: 'Sept 10 - Sept 23, 2024', days: '12', status: 'Pending' },
-    { id: 'REQ-2024-2112', type: 'Annual', dates: 'Sept 10 - Sept 23, 2024', days: '12', status: 'Pending' },
 ];
 
 const LeaveHistoryTable = () => {
     return (
       <div className="overflow-x-auto">
-        <div className="min-w-[1000px]">
-          <div className="grid grid-cols-12 gap-4 bg-table-header-gray rounded-t-lg px-6 py-4 text-nimasa-dark-text font-bold text-base">
+        <div className="min-w-[800px]">
+          <div className="grid grid-cols-12 gap-4 bg-table-header-gray/60 rounded-t-lg px-4 py-2 text-nimasa-dark-text font-bold text-xs">
             <div className="col-span-2">Request ID</div>
             <div className="col-span-2">Leave Type</div>
             <div className="col-span-3">Dates</div>
@@ -26,9 +25,9 @@ const LeaveHistoryTable = () => {
             <div className="col-span-2 text-center">Status</div>
             <div className="col-span-2 text-center">Action</div>
           </div>
-          <div className="bg-input-bg">
+          <div className="bg-input-bg/70">
             {leaveHistoryData.map((item, index) => (
-              <div key={index} className="grid grid-cols-12 gap-4 items-center px-6 py-3 text-nimasa-dark-text text-base border-b border-white last:border-b-0">
+              <div key={index} className="grid grid-cols-12 gap-4 items-center px-4 py-2 text-nimasa-dark-text text-xs border-b border-white last:border-b-0">
                 <div className="col-span-2">{item.id}</div>
                 <div className="col-span-2">{item.type}</div>
                 <div className="col-span-3">{item.dates}</div>

@@ -11,22 +11,22 @@ const TeamCalendarView = ({ onDayClick }: TeamCalendarViewProps) => {
 
   return (
     <div>
-      <div className="flex items-center justify-center gap-4 md:gap-8 mb-8">
+      <div className="flex items-center justify-center gap-4 md:gap-6 mb-4">
         <div className="flex items-center gap-2 cursor-pointer">
-          <h2 className="text-3xl md:text-4xl font-bold text-nimasa-dark-text">October</h2>
-          <ChevronDown size={28} className="text-nimasa-dark-text" />
+          <h2 className="text-lg md:text-xl font-bold text-nimasa-dark-text">October</h2>
+          <ChevronDown size={22} className="text-nimasa-dark-text" />
         </div>
         <div className="flex items-center gap-2 cursor-pointer">
-          <h2 className="text-3xl md:text-4xl font-bold text-nimasa-dark-text">2025</h2>
-          <ChevronDown size={28} className="text-nimasa-dark-text" />
+          <h2 className="text-lg md:text-xl font-bold text-nimasa-dark-text">2025</h2>
+          <ChevronDown size={22} className="text-nimasa-dark-text" />
         </div>
       </div>
 
-      <div className="grid grid-cols-7 gap-2 text-center text-lg font-medium text-gray-500 mb-4">
+      <div className="grid grid-cols-7 gap-1 text-center text-sm font-medium text-gray-500 mb-2">
         {daysOfWeek.map(day => <div key={day}>{day}</div>)}
       </div>
 
-      <div className="grid grid-cols-7 gap-2">
+      <div className="grid grid-cols-7 gap-1">
         {calendarData.map((day, index) => {
           const isClickable = day.leaves.length > 0;
           const DayComponent = isClickable ? 'button' : 'div';
@@ -35,16 +35,19 @@ const TeamCalendarView = ({ onDayClick }: TeamCalendarViewProps) => {
             <DayComponent
               key={index}
               onClick={() => isClickable && onDayClick(day)}
-              className={`h-44 border border-gray-200 rounded-lg p-2 text-left transition-all duration-200 ${day.isWeekend ? 'bg-gray-100' : 'bg-white'} ${isClickable ? 'cursor-pointer hover:bg-gray-50 hover:shadow-md' : ''}`}
+              className={`h-24 lg:h-28 border border-gray-200 rounded-md p-1 text-left transition-all duration-200 ${day.isWeekend ? 'bg-gray-100' : 'bg-white'} ${isClickable ? 'cursor-pointer hover:bg-gray-50 hover:shadow-md' : ''}`}
             >
-              <p className="text-lg font-bold text-right">{day.date}</p>
-              <div className="mt-1 space-y-1">
-                {day.leaves.map((leave, leaveIndex) => (
-                  <div key={leaveIndex} className="flex items-center gap-1.5">
-                    <div className={`w-2 h-2 rounded-full flex-shrink-0 ${leave.leaveColor}`}></div>
-                    <p className="text-xs font-medium text-nimasa-dark-text truncate">{leave.employeeName}</p>
+              <p className="text-xs font-bold text-right">{day.date}</p>
+              <div className="mt-1 space-y-0.5">
+                {day.leaves.slice(0, 3).map((leave, leaveIndex) => (
+                  <div key={leaveIndex} className="flex items-center gap-1">
+                    <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${leave.leaveColor}`}></div>
+                    <p className="text-[9px] font-medium text-nimasa-dark-text truncate">{leave.employeeName}</p>
                   </div>
                 ))}
+                {day.leaves.length > 3 && (
+                   <p className="text-[9px] font-bold text-nimasa-blue mt-0.5">+ {day.leaves.length - 3} more</p>
+                )}
               </div>
             </DayComponent>
           );

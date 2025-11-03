@@ -28,19 +28,19 @@ const CalendarView = () => {
   };
 
   return (
-    <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8">
-      <div className="flex items-center justify-center gap-4 md:gap-8 mb-8">
+    <div className="bg-white rounded-2xl shadow-lg p-4">
+      <div className="flex items-center justify-center gap-4 md:gap-6 mb-4">
         <div className="flex items-center gap-2 cursor-pointer">
-          <h2 className="text-3xl md:text-4xl font-bold text-nimasa-dark-text">October</h2>
-          <ChevronDown size={28} className="text-nimasa-dark-text" />
+          <h2 className="text-lg md:text-xl font-bold text-nimasa-dark-text">October</h2>
+          <ChevronDown size={20} className="text-nimasa-dark-text" />
         </div>
         <div className="flex items-center gap-2 cursor-pointer">
-          <h2 className="text-3xl md:text-4xl font-bold text-nimasa-dark-text">2025</h2>
-          <ChevronDown size={28} className="text-nimasa-dark-text" />
+          <h2 className="text-lg md:text-xl font-bold text-nimasa-dark-text">2025</h2>
+          <ChevronDown size={20} className="text-nimasa-dark-text" />
         </div>
       </div>
 
-      <div className="grid grid-cols-7 gap-2 text-center text-lg font-medium text-gray-500 mb-4">
+      <div className="grid grid-cols-7 gap-2 text-center text-sm font-medium text-gray-500 mb-3">
         {daysOfWeek.map(day => <div key={day}>{day}</div>)}
       </div>
 
@@ -48,7 +48,7 @@ const CalendarView = () => {
         {calendarDays.map((item, index) => (
           <div
             key={index}
-            className={`h-16 w-full flex items-center justify-center rounded-full text-xl font-medium ${getDayClass(item.type)}`}
+            className={`h-10 w-full flex items-center justify-center rounded-full text-sm font-medium ${getDayClass(item.type)}`}
           >
             {item.day}
           </div>

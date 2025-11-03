@@ -4,7 +4,7 @@ import AllApplicationsList from '../components/all-applications/AllApplicationsL
 const AllApplications = () => {
   return (
     <AdminLayout>
-      <h1 className="text-3xl md:text-5xl font-bold text-nimasa-dark-text mb-8">All Leave Applications</h1>
+      <h1 className="text-lg md:text-xl font-bold text-nimasa-dark-text mb-6">All Leave Applications</h1>
       <AllApplicationsList />
     </AdminLayout>
   );

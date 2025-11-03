@@ -36,25 +36,25 @@ const leaveTypes: LeaveTypeConfig[] = [
 const LeaveTypeTable = () => {
   return (
     <div className="overflow-x-auto">
-      <div className="min-w-[1000px]">
+      <div className="min-w-[700px]">
         {/* Header */}
-        <div className="grid grid-cols-12 gap-4 px-4 pb-4 text-xl font-medium text-nimasa-dark-text">
-          <div className="col-span-2">TYPE NAME</div>
-          <div className="col-span-2">DEFAULT DAYS</div>
-          <div className="col-span-6">POLICY RULE</div>
-          <div className="col-span-2 text-center">ACTION</div>
+        <div className="grid grid-cols-12 gap-4 px-4 pb-3 text-xs font-medium text-gray-500 uppercase">
+          <div className="col-span-2">Type Name</div>
+          <div className="col-span-2">Default Days</div>
+          <div className="col-span-6">Policy Rule</div>
+          <div className="col-span-2 text-center">Action</div>
         </div>
 
         {/* Body */}
         <div className="divide-y divide-gray-100">
           {leaveTypes.map((leaveType) => (
-            <div key={leaveType.id} className="grid grid-cols-12 gap-4 items-center py-4 px-4">
-              <div className="col-span-2 font-medium text-base text-nimasa-dark-text">{leaveType.name}</div>
-              <div className="col-span-2 font-medium text-base text-nimasa-dark-text">{leaveType.defaultDays}</div>
-              <div className="col-span-6 text-base text-gray-600">{leaveType.policyRule}</div>
+            <div key={leaveType.id} className="grid grid-cols-12 gap-4 items-center py-2.5 px-4">
+              <div className="col-span-2 font-medium text-xs text-nimasa-dark-text">{leaveType.name}</div>
+              <div className="col-span-2 font-medium text-xs text-nimasa-dark-text">{leaveType.defaultDays}</div>
+              <div className="col-span-6 text-xs text-gray-600">{leaveType.policyRule}</div>
               <div className="col-span-2 flex items-center justify-center gap-4">
-                <button className="text-nimasa-blue font-medium text-base hover:underline">Edit</button>
-                <button className="text-nimasa-red font-medium text-base hover:underline">Delete</button>
+                <button className="text-nimasa-blue font-medium text-xs hover:underline">Edit</button>
+                <button className="text-nimasa-red font-medium text-xs hover:underline">Delete</button>
               </div>
             </div>
           ))}

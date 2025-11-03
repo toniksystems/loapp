@@ -11,12 +11,12 @@ const LeaveProgressBar: React.FC<LeaveProgressProps> = ({ label, used, total }) 
   return (
     <div>
       <div className="flex justify-between items-center mb-1">
-        <span className="text-lg font-ubuntu text-nimasa-dark-text">{label}</span>
-        <span className="text-lg font-ubuntu text-nimasa-dark-text">{`${used}/${total}`}</span>
+        <span className="text-sm font-ubuntu text-nimasa-dark-text">{label}</span>
+        <span className="text-sm font-ubuntu text-nimasa-dark-text">{`${used}/${total}`}</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-4">
+      <div className="w-full bg-gray-200 rounded-full h-2.5">
         <div
-          className="bg-nimasa-green h-4 rounded-full"
+          className="bg-nimasa-green h-2.5 rounded-full"
           style={{ width: `${percentage}%` }}
         ></div>
       </div>
@@ -26,8 +26,8 @@ const LeaveProgressBar: React.FC<LeaveProgressProps> = ({ label, used, total }) 
 
 const LeaveApplicationHeader = () => {
   return (
-    <div className="bg-white rounded-3xl shadow-lg p-6">
-      <h3 className="text-2xl font-medium text-nimasa-dark-text mb-6">Akin Adebola</h3>
+    <div className="bg-white rounded-2xl shadow-lg p-4">
+      <h3 className="text-base font-medium text-nimasa-dark-text mb-5">Akin Adebola</h3>
       <div className="space-y-4">
         <LeaveProgressBar label="Annual Leave" used={9} total={21} />
         <LeaveProgressBar label="Casual Leave" used={3} total={12} />

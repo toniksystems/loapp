@@ -42,7 +42,7 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
-  const logoUrl = "https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/38d3/9dd7/620e6ef37bfb456fdb1e3dc3301dfdb2?Expires=1762732800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=H4GbpajizxQ2lXk-4Rs1DSzcuWOmojsjYJVglTcCNGheKXK4uGqVMu91T6YsHTQbMyzmtz1f2eH0CH7DtuZBquS98n8z4L54LVjdIaQd1hO7m3bcgudKHQ1l3z0tQiNJr2LMQQlvpltbR~zyNuQdcNBuF9yWVgiZAw3-T54Oty5ug39CXtJgP5n2x-fYLFRXPYMvBZ9XMIP2AMyQeFHPMDAm~7Ov8Ws1fNZO9NTQSnHIzg18LitnbyPNxHQSR9S~Mp0IOan4r5DCV4p0wOam65LNv4~qn02kPVUpXyRN18ZSz2ssbmKsfM0LSaLmN6WggTENbHxc3yLkd5m67w60Tg__";
+  const logoUrl = "https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/38d3/9dd7/620e6ef37bfb456fdb1e3dc3301dfdb2?Expires=1762732800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=H4GbpajizxQ2lXk-4Rs1DSzcuWOmojsjYJVglTcCNGheKXK4uGqVMu91T6YsHTQbMyzmtz1f2eH0CH7DtuZBquS98n8z4L54LVjdIaQd1hO7m3bcgudKHQ1l3z0tQiNJr2LMQQlvpltbR~zyNuQdcNBuF9yWVgiZAw3-T54Oty5ug39CXtJgP5n2x-fYLFRXPYMvBZ9XMIP2AMyQeFHPMDAm~7Ov8Ws1fNZO9NTQSnHIzg18LitnbyPNxHQSR9S~Mp0IOan4r5DCV4p0wOam65LNv4~qn02kPVUpXyRN18ZSz2ssbmKsfM0LSaLmN6WggTENbHxc3yLkd5m67w60Tg__";
 
   return (
     <>
@@ -53,67 +53,67 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
         onClick={() => setIsOpen(false)}
       ></div>
       <aside
-        className={`w-96 bg-white h-screen flex flex-col fixed shadow-md z-40 transform transition-transform lg:transform-none ${
+        className={`w-64 bg-white h-screen flex flex-col fixed shadow-md z-40 transform transition-transform lg:transform-none ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex items-start justify-between py-6 px-6 border-b border-gray-200">
+        <div className="flex items-start justify-between py-3 px-4 border-b border-gray-200">
           <div className="flex flex-col items-center w-full">
-            <img src={logoUrl} alt="NIMASA Logo" className="h-24 w-24 mb-2" />
-            <h2 className="text-lg font-medium text-nimasa-dark-text">NIMASA Leave Portal</h2>
+            <img src={logoUrl} alt="NIMASA Logo" className="h-14 w-14 mb-1" />
+            <h2 className="text-xs font-medium text-nimasa-dark-text">NIMASA Leave Portal</h2>
           </div>
           <button onClick={() => setIsOpen(false)} className="lg:hidden text-gray-500 hover:text-nimasa-red">
             <X size={24} />
           </button>
         </div>
-        <nav className="flex-grow pt-4 overflow-y-auto" onClick={() => setIsOpen(false)}>
-          <p className="px-8 text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Employee</p>
-          <ul className="space-y-2">
+        <nav className="flex-grow pt-2 overflow-y-auto" onClick={() => setIsOpen(false)}>
+          <p className="px-6 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Employee</p>
+          <ul className="space-y-1">
             {navItems.map((item, index) => (
               <li key={`emp-${index}`} className="px-2">
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                    `flex items-center gap-4 px-6 py-3 rounded-lg transition-colors duration-200 whitespace-pre-line text-nimasa-dark-text hover:bg-nimasa-blue/10 ${
+                    `flex items-center gap-2 px-4 py-1.5 rounded-lg transition-colors duration-200 whitespace-pre-line text-nimasa-dark-text hover:bg-nimasa-blue/10 ${
                       isActive ? 'bg-nimasa-blue/10 text-nimasa-blue font-bold' : ''
                     }`
                   }
                 >
-                  <item.icon className="h-6 w-6" />
-                  <span className="text-lg font-medium">{item.name}</span>
+                  <item.icon className="h-4 w-4" />
+                  <span className="text-sm font-medium">{item.name}</span>
                 </NavLink>
               </li>
             ))}
           </ul>
-          <p className="px-8 mt-6 text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Manager</p>
-           <ul className="space-y-2">
+          <p className="px-6 mt-4 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Manager</p>
+           <ul className="space-y-1">
             {managerNavItems.map((item, index) => (
               <li key={`mgr-${index}`} className="px-2">
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                    `flex items-center gap-4 px-6 py-3 rounded-lg transition-colors duration-200 whitespace-pre-line text-nimasa-dark-text hover:bg-nimasa-blue/10 ${
+                    `flex items-center gap-2 px-4 py-1.5 rounded-lg transition-colors duration-200 whitespace-pre-line text-nimasa-dark-text hover:bg-nimasa-blue/10 ${
                       isActive ? 'bg-nimasa-blue/10 text-nimasa-blue font-bold' : ''
                     }`
                   }
                 >
-                  <item.icon className="h-6 w-6" />
-                  <span className="text-lg font-medium">{item.name}</span>
+                  <item.icon className="h-4 w-4" />
+                  <span className="text-sm font-medium">{item.name}</span>
                 </NavLink>
               </li>
             ))}
           </ul>
         </nav>
-        <div className="py-4 border-t border-gray-200">
-             <ul className="space-y-2">
+        <div className="py-2 border-t border-gray-200">
+             <ul className="space-y-1">
                 {utilityItems.map((item, index) => (
                   <li key={`util-${index}`} className="px-2">
                     <NavLink
                       to={item.path}
-                      className="flex items-center gap-4 px-6 py-3 rounded-lg transition-colors duration-200 whitespace-pre-line text-nimasa-red"
+                      className="flex items-center gap-2 px-4 py-1.5 rounded-lg transition-colors duration-200 whitespace-pre-line text-nimasa-red"
                     >
-                      <item.icon className="h-6 w-6 text-nimasa-red" />
-                      <span className="text-lg font-medium">{item.name}</span>
+                      <item.icon className="h-4 w-4 text-nimasa-red" />
+                      <span className="text-sm font-medium">{item.name}</span>
                     </NavLink>
                   </li>
                 ))}

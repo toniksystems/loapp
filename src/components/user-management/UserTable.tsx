@@ -8,20 +8,20 @@ interface UserTableProps {
 
 const UserTable: React.FC<UserTableProps> = ({ users }) => {
   return (
-    <div className="bg-white rounded-3xl shadow-lg p-8">
+    <div className="bg-white rounded-2xl shadow-lg p-4">
       <div className="overflow-x-auto">
-        <div className="min-w-[1200px]">
+        <div className="min-w-[1000px]">
           {/* Header */}
-          <div className="grid grid-cols-12 gap-4 px-4 pb-4 text-lg font-medium text-nimasa-dark-text">
+          <div className="grid grid-cols-12 gap-4 px-4 pb-3 text-xs font-medium text-gray-500 uppercase">
             <div className="col-span-1 flex items-center">
-              <input type="checkbox" className="h-5 w-5" />
+              <input type="checkbox" className="h-4 w-4" />
             </div>
-            <div className="col-span-3">EMPLOYEE NAME AND ID</div>
-            <div className="col-span-1">ROLE</div>
-            <div className="col-span-2">DEPARTMENT</div>
-            <div className="col-span-1">STATUS</div>
-            <div className="col-span-2">LAST ACTIVE</div>
-            <div className="col-span-2">ACTION</div>
+            <div className="col-span-3">Employee Name and ID</div>
+            <div className="col-span-1">Role</div>
+            <div className="col-span-2">Department</div>
+            <div className="col-span-1">Status</div>
+            <div className="col-span-2">Last Active</div>
+            <div className="col-span-2">Action</div>
           </div>
 
           {/* Body */}

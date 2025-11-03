@@ -6,10 +6,14 @@ import SecuritySettings from '../components/profile/SecuritySettings';
 const Profile = () => {
   return (
     <Layout>
-      <h1 className="text-3xl md:text-5xl font-bold text-nimasa-dark-text mb-8">My Profile</h1>
+      <h1 className="text-lg md:text-xl font-bold text-nimasa-dark-text mb-4">My Profile</h1>
       <ProfileHeader />
-      <PersonalInformation />
-      <SecuritySettings />
+      <div className="mt-4">
+        <PersonalInformation />
+      </div>
+      <div className="mt-4">
+        <SecuritySettings />
+      </div>
     </Layout>
   );
 };

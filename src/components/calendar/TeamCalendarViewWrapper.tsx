@@ -3,7 +3,7 @@ import { TeamCalendarDay } from '../../types';
 import DayDetailsModal from '../team-calendar/DayDetailsModal';
 import StaffOnLeave from '../team-calendar/StaffOnLeave';
 import TeamCalendarFilters from '../team-calendar/TeamCalendarFilters';
-import TeamCalendarView from '../team-calendar/TeamCalendarView';
+import TeamCalendarView from './TeamCalendarView';
 import TeamLegend from '../team-calendar/TeamLegend';
 
 const TeamCalendarViewWrapper = () => {
@@ -24,10 +24,10 @@ const TeamCalendarViewWrapper = () => {
 
   return (
     <>
-      <h1 className="text-3xl md:text-5xl font-bold text-nimasa-dark-text mb-8">Team Calendar</h1>
-      <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8">
+      <h1 className="text-base md:text-lg font-bold text-nimasa-dark-text mb-4">Team Calendar</h1>
+      <div className="bg-white rounded-2xl shadow-lg p-4">
         <TeamCalendarView onDayClick={handleDayClick} />
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-5 items-start">
           <TeamLegend />
           <TeamCalendarFilters />
           <StaffOnLeave />

@@ -4,20 +4,20 @@ import AllApplicationsPagination from './AllApplicationsPagination';
 
 const AllApplicationsList = () => {
   return (
-    <div className="bg-white rounded-3xl shadow-lg p-8">
-      <h2 className="text-2xl md:text-3xl font-medium text-nimasa-dark-text mb-8">Full Application List</h2>
+    <div className="bg-white rounded-2xl shadow-lg p-4">
+      <h2 className="text-base font-semibold text-nimasa-dark-text mb-4">Full Application List</h2>
       <div className="overflow-x-auto">
-        <div className="min-w-[1200px]">
+        <div className="min-w-[800px]">
           {/* Header */}
-          <div className="grid grid-cols-12 gap-4 px-4 pb-4 text-lg font-medium text-nimasa-dark-text">
+          <div className="grid grid-cols-12 gap-4 px-4 pb-3 text-xs font-medium text-gray-500 uppercase">
             <div className="col-span-1 flex items-center">
-                <input type="checkbox" className="h-5 w-5 rounded border-gray-400" />
+                <input type="checkbox" className="h-4 w-4 rounded border-gray-400" />
             </div>
-            <div className="col-span-3">EMPLOYEE NAME AND ID</div>
-            <div className="col-span-2">TYPE</div>
-            <div className="col-span-2">DATES</div>
-            <div className="col-span-2">HOD STATUS</div>
-            <div className="col-span-2">HR STATUS</div>
+            <div className="col-span-3">Employee Name and ID</div>
+            <div className="col-span-2">Type</div>
+            <div className="col-span-2">Dates</div>
+            <div className="col-span-2">HOD Status</div>
+            <div className="col-span-2">HR Status</div>
           </div>
 
           {/* Body */}

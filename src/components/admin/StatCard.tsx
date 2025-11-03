@@ -8,11 +8,11 @@ interface StatCardProps {
 
 const StatCard: React.FC<StatCardProps> = ({ icon, title, value }) => {
   return (
-    <div className="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center justify-center gap-4 text-center h-48">
-        <h3 className="text-3xl font-medium text-nimasa-dark-text">{title}</h3>
-        <div className="flex items-center gap-5">
+    <div className="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center justify-center gap-2 text-center h-28">
+        <h3 className="text-sm font-medium text-nimasa-dark-text">{title}</h3>
+        <div className="flex items-center gap-3">
             {icon}
-            <p className="text-5xl font-bold text-nimasa-dark-text">{value}</p>
+            <p className="text-xl font-bold text-nimasa-dark-text">{value}</p>
         </div>
     </div>
   );
