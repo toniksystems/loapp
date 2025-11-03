@@ -20,7 +20,7 @@ export interface LeaveApprovalRequest {
 export interface ApprovedRequest {
   id: string;
   employee: {
-    name: string;
+    name:string;
     avatarUrl: string;
     employeeId: string;
   };
@@ -78,4 +78,17 @@ export interface AllRequest {
     by: string;
     date: string;
   };
+}
+
+export interface TeamCalendarLeave {
+  employeeName: string;
+  avatarUrl: string;
+  leaveType: string;
+  leaveColor: string;
+}
+
+export interface TeamCalendarDay {
+  date: number | null;
+  isWeekend: boolean;
+  leaves: TeamCalendarLeave[];
 }
