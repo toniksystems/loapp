@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { TeamCalendarDay } from '../../types';
-import DayDetailsModal from './DayDetailsModal';
-import StaffOnLeave from './StaffOnLeave';
-import TeamCalendarFilters from './TeamCalendarFilters';
-import TeamCalendarView from './TeamCalendarView';
-import TeamLegend from './TeamLegend';
+import DayDetailsModal from '../team-calendar/DayDetailsModal';
+import StaffOnLeave from '../team-calendar/StaffOnLeave';
+import TeamCalendarFilters from '../team-calendar/TeamCalendarFilters';
+import TeamCalendarView from '../team-calendar/TeamCalendarView';
+import TeamLegend from '../team-calendar/TeamLegend';
 
 const TeamCalendarViewWrapper = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
