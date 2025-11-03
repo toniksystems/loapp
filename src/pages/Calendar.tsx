@@ -1,22 +1,35 @@
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Layout from '../components/Layout';
-import CalendarView from '../components/calendar/CalendarView';
-import CalendarFilters from '../components/calendar/CalendarFilters';
-import Legend from '../components/calendar/Legend';
-import UpcomingLeaves from '../components/calendar/UpcomingLeaves';
+import CalendarTabs from '../components/calendar/CalendarTabs';
+import MyCalendarView from '../components/calendar/MyCalendarView';
+import TeamCalendarViewWrapper from '../components/calendar/TeamCalendarViewWrapper';
 
-const CalendarPage = () => {
+type TabType = 'my' | 'team';
+
+interface CalendarPageProps {
+  defaultTab: TabType;
+}
+
+const CalendarPage = ({ defaultTab }: CalendarPageProps) => {
+  const [activeTab, setActiveTab] = useState<TabType>(defaultTab);
+  const location = useLocation();
+
+  useEffect(() => {
+    // This effect ensures that if the user navigates via the sidebar,
+    // the component updates to show the correct tab.
+    if (location.pathname === '/calendar') {
+      setActiveTab('my');
+    } else if (location.pathname === '/team-calendar') {
+      setActiveTab('team');
+    }
+  }, [location.pathname]);
+
   return (
     <Layout>
-      <h1 className="text-3xl md:text-5xl font-bold text-nimasa-dark-text mb-8">My Calendar</h1>
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-start">
-        <div className="xl:col-span-2 flex flex-col gap-8">
-          <CalendarView />
-          <UpcomingLeaves />
-        </div>
-        <div className="flex flex-col gap-8">
-          <CalendarFilters />
-          <Legend />
-        </div>
+      <CalendarTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      <div className="mt-8">
+        {activeTab === 'my' ? <MyCalendarView /> : <TeamCalendarViewWrapper />}
       </div>
     </Layout>
   );
