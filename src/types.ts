@@ -92,3 +92,65 @@ export interface TeamCalendarDay {
   isWeekend: boolean;
   leaves: TeamCalendarLeave[];
 }
+
+export interface AuditLogEntry {
+  timestamp: string;
+  user: string;
+  actionType: string;
+  description: string;
+}
+
+export interface LeaveTypeConfig {
+  id: string;
+  name: string;
+  defaultDays: string;
+  policyRule: string;
+}
+
+export interface QuotaConfig {
+  id: string;
+  role: string;
+  annualQuota: string;
+  sickQuota: string;
+  casualQuota: string;
+}
+
+export interface RoleConfig {
+  id: string;
+  role: string;
+  leaveApprovalLevel: string;
+  systemConfig: string;
+  overrideCapability: 'Yes' | 'No';
+}
+
+export interface ManagedUser {
+  id: string;
+  name: string;
+  employeeId: string;
+  avatarUrl: string;
+  role: 'Manager' | 'Employee' | 'Admin';
+  department: string;
+  status: 'Active' | 'Inactive';
+  lastActive: string;
+}
+
+export interface FullApplication {
+  id: string;
+  employee: {
+    name: string;
+    employeeId: string;
+    avatarUrl: string;
+  };
+  leaveType: string;
+  dates: string;
+  hodStatus: 'Pending' | 'Approved' | 'Rejected';
+  hrStatus: 'Pending' | 'Approved' | 'Rejected' | 'N/A';
+}
+
+export interface FullAuditLog {
+  logId: string;
+  timestamp: string;
+  userId: string;
+  actionType: string;
+  details: string;
+}
