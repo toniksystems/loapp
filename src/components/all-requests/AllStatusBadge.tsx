@@ -25,7 +25,7 @@ const AllStatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
   const { bgColor, text } = config[status];
 
   return (
-    <div className={`inline-block text-white font-medium py-2 px-5 rounded-full text-base ${bgColor}`}>
+    <div className={`inline-block text-white font-medium py-1.5 px-4 rounded-full text-sm ${bgColor}`}>
       {text}
     </div>
   );

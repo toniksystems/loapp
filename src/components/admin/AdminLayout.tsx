@@ -13,9 +13,9 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
   return (
     <div className="bg-background-gray min-h-screen font-ubuntu">
       <AdminSidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
-      <div className="lg:ml-96">
+      <div className="lg:ml-72">
         <Header onMenuClick={() => setSidebarOpen(true)} />
-        <main className="p-10 md:p-14">
+        <main className="p-6 md:p-8">
           {children}
         </main>
         <Footer />

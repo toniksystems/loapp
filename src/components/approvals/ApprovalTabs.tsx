@@ -14,7 +14,7 @@ const ApprovalTabs: React.FC<ApprovalTabsProps> = ({ activeTab, setActiveTab }) 
         <button
           key={tab}
           onClick={() => setActiveTab(tab)}
-          className={`px-5 sm:px-6 py-2.5 text-base sm:text-lg font-medium transition-colors duration-200 relative ${
+          className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-colors duration-200 relative ${
             activeTab === tab
               ? 'text-nimasa-blue'
               : 'text-gray-600 hover:text-nimasa-blue'
@@ -22,7 +22,7 @@ const ApprovalTabs: React.FC<ApprovalTabsProps> = ({ activeTab, setActiveTab }) 
         >
           {tab}
           {activeTab === tab && (
-            <span className="absolute bottom-0 left-0 right-0 h-1 bg-nimasa-blue rounded-t-full"></span>
+            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-nimasa-blue rounded-t-full"></span>
           )}
         </button>
       ))}

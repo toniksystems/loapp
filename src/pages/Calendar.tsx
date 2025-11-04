@@ -28,7 +28,7 @@ const CalendarPage = ({ defaultTab }: CalendarPageProps) => {
   return (
     <Layout>
       <CalendarTabs activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div className="mt-10">
+      <div className="mt-8">
         {activeTab === 'my' ? <MyCalendarView /> : <TeamCalendarViewWrapper />}
       </div>
     </Layout>

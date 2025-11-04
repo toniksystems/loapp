@@ -12,12 +12,12 @@ const auditLogs: AuditLogEntry[] = [
 
 const AuditLog = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6">
-      <h3 className="text-xl font-semibold text-nimasa-dark-text mb-5">Latest System Logs (Audit)</h3>
+    <div className="bg-white rounded-2xl shadow-lg p-5">
+      <h3 className="text-lg font-semibold text-nimasa-dark-text mb-4">Latest System Logs (Audit)</h3>
       <div className="overflow-x-auto">
-        <div className="min-w-[1000px]">
+        <div className="min-w-[900px]">
           {/* Header */}
-          <div className="grid grid-cols-10 gap-5 px-5 pb-4 text-base font-bold text-gray-500 uppercase border-b-2 border-gray-200">
+          <div className="grid grid-cols-10 gap-4 px-4 pb-3 text-sm font-bold text-gray-500 uppercase border-b-2 border-gray-200">
             <div className="col-span-2">Timestamp</div>
             <div className="col-span-1">User</div>
             <div className="col-span-2">Action Type</div>
@@ -26,10 +26,10 @@ const AuditLog = () => {
           {/* Body */}
           <div className="divide-y divide-gray-100">
             {auditLogs.map((log, index) => (
-              <div key={index} className="grid grid-cols-10 gap-5 items-start py-4 px-5 text-base text-gray-700">
+              <div key={index} className="grid grid-cols-10 gap-4 items-start py-3 px-4 text-sm text-gray-700">
                 <div className="col-span-2 font-medium">{log.timestamp}</div>
                 <div className="col-span-1">{log.user}</div>
-                <div className="col-span-2 font-mono bg-gray-100 px-3 py-1.5 rounded-md">{log.actionType}</div>
+                <div className="col-span-2 font-mono bg-gray-100 px-2 py-1 rounded-md text-xs">{log.actionType}</div>
                 <div className="col-span-5">{log.description}</div>
               </div>
             ))}

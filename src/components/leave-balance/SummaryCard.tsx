@@ -9,13 +9,13 @@ interface SummaryCardProps {
 
 const SummaryCard: React.FC<SummaryCardProps> = ({ title, value, subtitle, bgColor }) => {
   return (
-    <div className={`${bgColor} text-white rounded-2xl p-8 flex flex-col justify-between h-48 shadow-lg`}>
+    <div className={`${bgColor} text-white rounded-2xl p-4 flex flex-col justify-between h-32 shadow-lg`}>
       <div>
-        <h3 className="text-2xl font-medium">{title}</h3>
+        <h3 className="text-base font-medium">{title}</h3>
       </div>
       <div className="text-center">
-        <p className="text-6xl font-bold">{value}</p>
-        <p className="text-xl">{subtitle}</p>
+        <p className="text-3xl font-bold">{value}</p>
+        <p className="text-sm">{subtitle}</p>
       </div>
     </div>
   );

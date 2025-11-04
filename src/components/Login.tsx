@@ -5,7 +5,7 @@ const Login = () => {
   const [email, setEmail] = useState('akin.a@nimasa.gov.ng');
   const [password, setPassword] = useState('**********');
   const navigate = useNavigate();
-  const logoUrl = "https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/38d3/9dd7/620e6ef37bfb456fdb1e3dc3301dfdb2?Expires=1762732800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=H4GbpajizxQ2lXk-4Rs1DSzcuWOmojsjYJVglTcCNGheKXK4uGqVMu91T6YsHTQbMyzmtz1f2eH0CH7DtuZBquS98n8z4L54LVjdIaQd1hO7m3bcgudKHQ1l3z0tQiNJr2LMQQlvpltbR~zyNuQdcNBuF9yWVgiZAw3-T54Oty5ug39CXtJgP5n2x-fYLFRXPYMvBZ9XMIP2AMyQeFHPMDAm~7Ov8Ws1fNZO9NTQSnHIzg18LitnbyPNxHQSR9S~Mp0IOan4r5DCV4p0wOam65LNv4~qn02kPVUpXyRN18ZSz2ssbmKsfM0LSaLmN6WggTENbHxc3yLkd5m67w60Tg__";
+  const logoUrl = "https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/38d3/9dd7/620e6ef37bfb456fdb1e3dc3301dfdb2?Expires=1762732800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=H4GbpajizxQ2lXk-4Rs1DSzcuWOmojsjYJVglTcCNGheKXK4uGqVMu91T6YsHTQbMyzmtz1f2eH0CH7DtuZBquS98n8z4L54LVjdIaQd1hO7m3bcgudKHQ1l3z0tQiNJr2LMQQlvpltbR~zyNuQdcNBuF9yWVgiZAw3-T54Oty5ug39CXtJgP5n2x-fYLFRXPYMvBZ9XMIP2AMyQeFHPMDAm~7Ov8Ws1fNZO9NTQSnHIzg18LitnbyPNxHQSR9S~Mp0IOan4r5DCV4p0wOam65LNv4~qn02kPVUpXyRN18ZSz2ssbmKsfM0LSaLmN6WggTENbHxc3yLkd5m67w60Tg__";
 
   const handleSignIn = (e: React.FormEvent) => {
     e.preventDefault();
@@ -14,18 +14,18 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 max-w-lg w-full mx-auto border border-gray-200">
-      <div className="flex flex-col items-center space-y-8">
-        <img src={logoUrl} alt="NIMASA Logo" className="h-24 w-24" />
+    <div className="bg-white rounded-2xl shadow-lg p-6 max-w-md w-full mx-auto border border-gray-200">
+      <div className="flex flex-col items-center space-y-5">
+        <img src={logoUrl} alt="NIMASA Logo" className="h-16 w-16" />
 
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-black">NIMASA Leave Portal</h1>
-          <p className="text-xl text-gray-700 mt-2">Please Sign into your account</p>
+          <h1 className="text-xl md:text-2xl font-bold text-black">NIMASA Leave Portal</h1>
+          <p className="text-base text-gray-700 mt-1">Please Sign into your account</p>
         </div>
 
-        <form onSubmit={handleSignIn} className="w-full space-y-7">
+        <form onSubmit={handleSignIn} className="w-full space-y-5">
           <div>
-            <label htmlFor="username" className="block text-xl font-bold text-gray-800 mb-2">
+            <label htmlFor="username" className="block text-sm font-bold text-gray-800 mb-1.5">
               Username/Employee ID
             </label>
             <input
@@ -33,12 +33,12 @@ const Login = () => {
               id="username"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-6 py-4 bg-input-bg rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nimasa-blue text-xl"
+              className="w-full px-4 py-2.5 bg-input-bg rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nimasa-blue text-sm"
             />
           </div>
 
           <div>
-            <label htmlFor="password" aria-label="Password" className="block text-xl font-bold text-gray-800 mb-2">
+            <label htmlFor="password" aria-label="Password" className="block text-sm font-bold text-gray-800 mb-1.5">
               Password
             </label>
             <input
@@ -46,19 +46,19 @@ const Login = () => {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-6 py-4 bg-input-bg rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nimasa-blue text-xl"
+              className="w-full px-4 py-2.5 bg-input-bg rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nimasa-blue text-sm"
             />
           </div>
 
           <div className="text-right">
-            <a href="#" className="text-xl font-medium text-nimasa-blue hover:underline">
+            <a href="#" className="text-sm font-medium text-nimasa-blue hover:underline">
               Forgot Password?
             </a>
           </div>
 
           <button
             type="submit"
-            className="w-full bg-nimasa-blue text-white font-bold py-4 rounded-full text-2xl hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-nimasa-blue"
+            className="w-full bg-nimasa-blue text-white font-bold py-2.5 rounded-full text-lg hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-nimasa-blue"
           >
             Sign In
           </button>

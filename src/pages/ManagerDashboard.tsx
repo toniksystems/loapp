@@ -8,10 +8,10 @@ const ManagerDashboard = () => {
   return (
     <Layout>
       <ManagerWelcome />
-      <div className="mt-8">
+      <div className="mt-5">
         <TeamLeaveStats />
       </div>
-      <div className="mt-8 grid grid-cols-1 xl:grid-cols-3 gap-8 items-start">
+      <div className="mt-5 grid grid-cols-1 xl:grid-cols-3 gap-5 items-start">
         <div className="xl:col-span-2">
           <PendingApprovals />
         </div>

@@ -6,8 +6,8 @@ import Pagination from '../components/history/Pagination';
 const LeaveHistory = () => {
   return (
     <Layout>
-      <h1 className="text-3xl md:text-4xl font-bold text-nimasa-dark-text mb-10">Leave History</h1>
-      <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+      <h1 className="text-xl md:text-2xl font-bold text-nimasa-dark-text mb-6">Leave History</h1>
+      <div className="bg-white rounded-2xl shadow-lg p-5 md:p-6">
         <LeaveHistoryFilters />
         <LeaveHistoryTable />
         <Pagination />

@@ -5,8 +5,8 @@ interface LegendItemProps {
 
 const LegendItem: React.FC<LegendItemProps> = ({ color, label }) => (
   <div className="flex items-center gap-3">
-    <div className={`h-5 w-5 rounded-full ${color}`}></div>
-    <span className="text-lg font-medium text-nimasa-dark-text">{label}</span>
+    <div className={`h-4 w-4 rounded-full ${color}`}></div>
+    <span className="text-base font-medium text-nimasa-dark-text">{label}</span>
   </div>
 );
 
@@ -16,14 +16,14 @@ const TeamLegend = () => {
     { color: 'bg-nimasa-gold', label: 'Sick Leave' },
     { color: 'bg-nimasa-blue', label: 'Out of Office' },
     { color: 'bg-nimasa-green', label: 'Annual Leave' },
-    { color: 'bg-maternity-purple', label: 'Maternity/Paternity Leave' },
+    { color: 'bg-maternity-purple', label: 'Maternity/Paternity' },
     { color: 'bg-table-header-gray', label: 'Weekends' },
   ];
 
   return (
-    <div className="bg-white rounded-3xl shadow-md p-6 border border-gray-200">
-      <h3 className="text-2xl font-medium text-nimasa-dark-text mb-6">Legend</h3>
-      <div className="space-y-4">
+    <div className="bg-white rounded-2xl shadow-md p-5 border border-gray-200">
+      <h3 className="text-xl font-medium text-nimasa-dark-text mb-5">Legend</h3>
+      <div className="space-y-3">
         {legendItems.map((item, index) => (
           <LegendItem key={index} color={item.color} label={item.label} />
         ))}

@@ -2,25 +2,25 @@ import { Plane, Check } from 'lucide-react';
 
 const UpcomingLeaves = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6">
-      <h3 className="text-xl font-medium text-nimasa-dark-text mb-6">Upcoming Leaves</h3>
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-        <div className="flex items-center gap-6">
-          <div className="bg-gray-100 p-3.5 rounded-full">
-            <Plane size={32} className="text-nimasa-dark-text" />
+    <div className="bg-white rounded-2xl shadow-lg p-4">
+      <h3 className="text-base font-medium text-nimasa-dark-text mb-4">Upcoming Leaves</h3>
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="flex items-center gap-4">
+          <div className="bg-gray-100 p-2.5 rounded-full">
+            <Plane size={24} className="text-nimasa-dark-text" />
           </div>
           <div>
-            <p className="text-xl font-bold text-nimasa-dark-text">Annual Leave</p>
-            <p className="text-lg text-gray-600">October 15 - 24, 2025</p>
+            <p className="text-base font-bold text-nimasa-dark-text">Annual Leave</p>
+            <p className="text-sm text-gray-600">October 15 - 24, 2025</p>
           </div>
-          <div className="h-4 w-4 rounded-full bg-nimasa-green ml-4 hidden sm:block"></div>
+          <div className="h-2.5 w-2.5 rounded-full bg-nimasa-green ml-2 hidden sm:block"></div>
         </div>
-        <div className="flex items-center gap-6">
-          <div className="bg-nimasa-green text-white flex items-center gap-3 px-5 py-2 rounded-lg">
-            <Check size={20} />
-            <span className="font-bold text-base">Approved</span>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-nimasa-green text-white">
+            <Check size={16} />
+            <span className="font-medium text-xs">Approved</span>
           </div>
-          <p className="text-2xl font-bold text-nimasa-dark-text text-right">8 Days</p>
+          <p className="text-lg font-bold text-nimasa-dark-text text-right">8 Days</p>
         </div>
       </div>
     </div>

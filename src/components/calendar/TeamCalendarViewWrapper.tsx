@@ -24,10 +24,10 @@ const TeamCalendarViewWrapper = () => {
 
   return (
     <>
-      <h1 className="text-2xl md:text-3xl font-bold text-nimasa-dark-text mb-8">Team Calendar</h1>
-      <div className="bg-white rounded-2xl shadow-lg p-6">
+      <h1 className="text-xl md:text-2xl font-bold text-nimasa-dark-text mb-6">Team Calendar</h1>
+      <div className="bg-white rounded-2xl shadow-lg p-5">
         <TeamCalendarView onDayClick={handleDayClick} />
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
           <TeamLegend />
           <TeamCalendarFilters />
           <StaffOnLeave />

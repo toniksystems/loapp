@@ -8,18 +8,18 @@ const Dashboard = () => {
   return (
     <Layout>
       <WelcomeBanner />
-      <div className="mt-10">
+      <div className="mt-6">
         <LeaveBalance />
       </div>
-      <div className="mt-10 flex flex-col sm:flex-row gap-10">
-        <button className="w-full bg-nimasa-blue text-white font-bold py-4 rounded-xl text-xl shadow-lg hover:bg-blue-700 transition-colors">
+      <div className="mt-6 flex flex-col sm:flex-row gap-5">
+        <button className="w-full bg-nimasa-blue text-white font-bold py-2.5 rounded-xl text-base shadow-lg hover:bg-blue-700 transition-colors">
           Apply for Leave
         </button>
-        <button className="w-full bg-nimasa-blue text-white font-bold py-4 rounded-xl text-xl shadow-lg hover:bg-blue-700 transition-colors">
+        <button className="w-full bg-nimasa-blue text-white font-bold py-2.5 rounded-xl text-base shadow-lg hover:bg-blue-700 transition-colors">
           View Calendar
         </button>
       </div>
-      <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-10">
+      <div className="mt-6 grid grid-cols-1 xl:grid-cols-2 gap-6">
         <MyRequests />
         <TeamLeaveUpdates />
       </div>

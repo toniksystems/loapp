@@ -58,9 +58,9 @@ const LeaveApprovals = () => {
 
   return (
     <Layout>
-      <h1 className="text-2xl md:text-3xl font-bold text-nimasa-dark-text mb-6">Leave Approval</h1>
-      <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-5 mb-6">
+      <h1 className="text-lg md:text-xl font-bold text-nimasa-dark-text mb-4">Leave Approval</h1>
+      <div className="bg-white rounded-2xl shadow-lg p-4 md:p-5">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3 mb-4">
             <ApprovalTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         </div>
         <ApprovalFilters />

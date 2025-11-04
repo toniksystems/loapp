@@ -4,14 +4,14 @@ import AllApplicationsPagination from './AllApplicationsPagination';
 
 const AllApplicationsList = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6">
-      <h2 className="text-xl font-semibold text-nimasa-dark-text mb-6">Full Application List</h2>
+    <div className="bg-white rounded-2xl shadow-lg p-5">
+      <h2 className="text-lg font-semibold text-nimasa-dark-text mb-5">Full Application List</h2>
       <div className="overflow-x-auto">
-        <div className="min-w-[1000px]">
+        <div className="min-w-[900px]">
           {/* Header */}
-          <div className="grid grid-cols-12 gap-5 px-5 pb-5 text-base font-medium text-gray-500 uppercase">
+          <div className="grid grid-cols-12 gap-4 px-4 pb-4 text-sm font-medium text-gray-500 uppercase">
             <div className="col-span-1 flex items-center">
-                <input type="checkbox" className="h-5 w-5 rounded border-gray-400" />
+                <input type="checkbox" className="h-4 w-4 rounded border-gray-400" />
             </div>
             <div className="col-span-3">Employee Name and ID</div>
             <div className="col-span-2">Type</div>

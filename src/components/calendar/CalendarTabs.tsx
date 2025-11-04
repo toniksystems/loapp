@@ -17,7 +17,7 @@ const CalendarTabs: React.FC<CalendarTabsProps> = ({ activeTab, setActiveTab }) 
         <button
           key={tab.key}
           onClick={() => setActiveTab(tab.key as 'my' | 'team')}
-          className={`px-6 sm:px-8 py-3 text-lg sm:text-xl font-medium transition-colors duration-200 relative ${
+          className={`px-5 sm:px-6 py-2.5 text-base sm:text-lg font-medium transition-colors duration-200 relative ${
             activeTab === tab.key
               ? 'text-nimasa-blue'
               : 'text-gray-600 hover:text-nimasa-blue'
@@ -25,7 +25,7 @@ const CalendarTabs: React.FC<CalendarTabsProps> = ({ activeTab, setActiveTab }) 
         >
           {tab.name}
           {activeTab === tab.key && (
-            <span className="absolute bottom-0 left-0 right-0 h-1.5 bg-nimasa-blue rounded-t-full"></span>
+            <span className="absolute bottom-0 left-0 right-0 h-1 bg-nimasa-blue rounded-t-full"></span>
           )}
         </button>
       ))}
