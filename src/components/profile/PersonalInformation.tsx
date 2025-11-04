@@ -18,9 +18,9 @@ const PersonalInformation = () => {
     };
 
     return (
-        <div className="bg-white rounded-2xl shadow-md p-4 mt-4">
-            <h3 className="text-base font-semibold text-nimasa-dark-text mb-4">Personal Information</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+        <div className="bg-white rounded-2xl shadow-lg p-8 mt-8">
+            <h3 className="text-2xl font-semibold text-nimasa-dark-text mb-8">Personal Information</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                 <ProfileInputField label="First Name" value={personalInfo.firstName} />
                 <ProfileInputField label="Last Name" value={personalInfo.lastName} />
                 <ProfileInputField label="Employee ID" value={personalInfo.employeeId} />
@@ -34,8 +34,8 @@ const PersonalInformation = () => {
                 <ProfileInputField label="Date of Birth" value={personalInfo.dob} />
                 <ProfileInputField label="Date of Employment" value={personalInfo.employmentDate} />
                 <div className="md:col-span-2">
-                    <label className="block text-sm font-medium text-nimasa-dark-text mb-1.5">Home Address</label>
-                    <div className="w-full px-4 py-2 bg-input-bg rounded-lg border border-gray-300 text-nimasa-dark-text text-sm flex items-center">
+                    <label className="block text-xl font-medium text-nimasa-dark-text mb-2.5">Home Address</label>
+                    <div className="w-full px-6 py-4 bg-input-bg rounded-lg border border-gray-300 text-nimasa-dark-text text-xl flex items-center">
                         {personalInfo.address}
                     </div>
                 </div>

@@ -9,8 +9,8 @@ interface ProfileInputFieldProps {
 const ProfileInputField: React.FC<ProfileInputFieldProps> = ({ label, value, className = '' }) => {
   return (
     <div className={className}>
-      <label className="block text-sm font-medium text-nimasa-dark-text mb-1.5">{label}</label>
-      <div className="w-full px-4 py-2 bg-input-bg rounded-lg border border-gray-300 text-nimasa-dark-text text-sm">
+      <label className="block text-xl font-medium text-nimasa-dark-text mb-2.5">{label}</label>
+      <div className="w-full px-6 py-4 bg-input-bg rounded-lg border border-gray-300 text-nimasa-dark-text text-xl">
         {value}
       </div>
     </div>

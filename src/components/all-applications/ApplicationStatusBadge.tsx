@@ -9,23 +9,23 @@ interface StatusBadgeProps {
 
 const ApplicationStatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
   if (status === 'N/A') {
-    return <span className="text-xs text-gray-500 px-4">{status}</span>;
+    return <span className="text-base text-gray-500 px-5">{status}</span>;
   }
 
   const config = {
     Pending: {
       bgColor: 'bg-nimasa-yellow',
-      icon: <Clock size={12} />,
+      icon: <Clock size={16} />,
       text: 'Pending',
     },
     Approved: {
       bgColor: 'bg-nimasa-green',
-      icon: <CheckCircle2 size={12} />,
+      icon: <CheckCircle2 size={16} />,
       text: 'Approved',
     },
     Rejected: {
       bgColor: 'bg-nimasa-red',
-      icon: <XCircle size={12} />,
+      icon: <XCircle size={16} />,
       text: 'Rejected',
     },
   };
@@ -33,7 +33,7 @@ const ApplicationStatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
   const { bgColor, icon, text } = config[status];
 
   return (
-    <div className={`flex items-center justify-center gap-1 py-0.5 px-2 rounded-full text-white text-xs font-medium ${bgColor} w-20`}>
+    <div className={`flex items-center justify-center gap-2 py-1.5 px-3 rounded-full text-white text-base font-medium ${bgColor} w-28`}>
       {icon}
       <span>{text}</span>
     </div>

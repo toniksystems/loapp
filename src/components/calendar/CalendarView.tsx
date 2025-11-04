@@ -28,27 +28,27 @@ const CalendarView = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-4">
-      <div className="flex items-center justify-center gap-4 md:gap-6 mb-4">
-        <div className="flex items-center gap-2 cursor-pointer">
-          <h2 className="text-lg md:text-xl font-bold text-nimasa-dark-text">October</h2>
-          <ChevronDown size={20} className="text-nimasa-dark-text" />
+    <div className="bg-white rounded-2xl shadow-lg p-6">
+      <div className="flex items-center justify-center gap-6 md:gap-8 mb-6">
+        <div className="flex items-center gap-2.5 cursor-pointer">
+          <h2 className="text-xl md:text-2xl font-bold text-nimasa-dark-text">October</h2>
+          <ChevronDown size={24} className="text-nimasa-dark-text" />
         </div>
-        <div className="flex items-center gap-2 cursor-pointer">
-          <h2 className="text-lg md:text-xl font-bold text-nimasa-dark-text">2025</h2>
-          <ChevronDown size={20} className="text-nimasa-dark-text" />
+        <div className="flex items-center gap-2.5 cursor-pointer">
+          <h2 className="text-xl md:text-2xl font-bold text-nimasa-dark-text">2025</h2>
+          <ChevronDown size={24} className="text-nimasa-dark-text" />
         </div>
       </div>
 
-      <div className="grid grid-cols-7 gap-2 text-center text-sm font-medium text-gray-500 mb-3">
+      <div className="grid grid-cols-7 gap-2.5 text-center text-lg font-medium text-gray-500 mb-4">
         {daysOfWeek.map(day => <div key={day}>{day}</div>)}
       </div>
 
-      <div className="grid grid-cols-7 gap-2">
+      <div className="grid grid-cols-7 gap-2.5">
         {calendarDays.map((item, index) => (
           <div
             key={index}
-            className={`h-10 w-full flex items-center justify-center rounded-full text-sm font-medium ${getDayClass(item.type)}`}
+            className={`h-12 w-full flex items-center justify-center rounded-full text-lg font-medium ${getDayClass(item.type)}`}
           >
             {item.day}
           </div>

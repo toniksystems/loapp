@@ -17,15 +17,15 @@ const CalendarTabs: React.FC<CalendarTabsProps> = ({ activeTab, setActiveTab }) 
         <button
           key={tab.key}
           onClick={() => setActiveTab(tab.key as 'my' | 'team')}
-          className={`px-4 sm:px-5 py-2 text-sm sm:text-base font-medium transition-colors duration-200 relative ${
+          className={`px-6 sm:px-8 py-3 text-lg sm:text-xl font-medium transition-colors duration-200 relative ${
             activeTab === tab.key
               ? 'text-nimasa-blue'
-              : 'text-gray-500 hover:text-nimasa-blue'
+              : 'text-gray-600 hover:text-nimasa-blue'
           }`}
         >
           {tab.name}
           {activeTab === tab.key && (
-            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-nimasa-blue rounded-t-full"></span>
+            <span className="absolute bottom-0 left-0 right-0 h-1.5 bg-nimasa-blue rounded-t-full"></span>
           )}
         </button>
       ))}

@@ -4,7 +4,7 @@ interface ApprovedStatusBadgeProps {
 
 const ApprovedStatusBadge: React.FC<ApprovedStatusBadgeProps> = ({ status }) => {
   return (
-    <div className="bg-nimasa-green text-white font-medium py-1.5 px-5 rounded-full text-sm">
+    <div className="bg-nimasa-green text-white font-medium py-2 px-6 rounded-full text-base">
       {status}
     </div>
   );

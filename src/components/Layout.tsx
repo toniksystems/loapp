@@ -13,9 +13,9 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="bg-background-gray min-h-screen font-ubuntu">
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
-      <div className="lg:ml-64">
+      <div className="lg:ml-96">
         <Header onMenuClick={() => setSidebarOpen(true)} />
-        <main className="p-4 md:p-6">
+        <main className="p-10 md:p-14">
           {children}
         </main>
         <Footer />

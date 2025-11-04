@@ -16,8 +16,8 @@ const leaveHistoryData = [
 const LeaveHistoryTable = () => {
     return (
       <div className="overflow-x-auto">
-        <div className="min-w-[800px]">
-          <div className="grid grid-cols-12 gap-4 bg-table-header-gray/60 rounded-t-lg px-4 py-2 text-nimasa-dark-text font-bold text-xs">
+        <div className="min-w-[1000px]">
+          <div className="grid grid-cols-12 gap-5 bg-table-header-gray/60 rounded-t-lg px-6 py-5 text-nimasa-dark-text font-bold text-lg">
             <div className="col-span-2">Request ID</div>
             <div className="col-span-2">Leave Type</div>
             <div className="col-span-3">Dates</div>
@@ -27,7 +27,7 @@ const LeaveHistoryTable = () => {
           </div>
           <div className="bg-input-bg/70">
             {leaveHistoryData.map((item, index) => (
-              <div key={index} className="grid grid-cols-12 gap-4 items-center px-4 py-2 text-nimasa-dark-text text-xs border-b border-white last:border-b-0">
+              <div key={index} className="grid grid-cols-12 gap-5 items-center px-6 py-4 text-nimasa-dark-text text-lg border-b border-white last:border-b-0">
                 <div className="col-span-2">{item.id}</div>
                 <div className="col-span-2">{item.type}</div>
                 <div className="col-span-3">{item.dates}</div>

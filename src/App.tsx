@@ -22,9 +22,9 @@ import AuditLogPage from './pages/AuditLogPage';
 const LoginPage = () => {
   return (
     <div 
-      className="min-h-screen w-full flex items-center justify-center lg:justify-end bg-[url('https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/6eeb/d522/eebcb06a93a708321dc86db398604082?Expires=1763337600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hwqvYqdQpnZu5vaFJo2Sr2SZHtV9WARXbAh41t8809xP4rKSXU7kMWoIbWVsXlEnVqZl8LOs61BEDMVjNOVKyrjjpwsCo1EESvMcxAxGRa5U7Uzc8DABW-EKQIDSzryw3OMO~ihBY5kKhzvpngo~~vVBpTnJQ3KCe7HYiHGU53HFU0soYJOdLPW6QF3gGWX1rw7eOPBzY6kaXRg~9GmACtnasjzZjzgY-256ZL3j0OinAfhBQRYPJz7~l0qt5LTE~yRG3s2i444OEj0qdzxaPNCr4bRSbsZoyrGkT1OVdjx~lKxzbBHAvQ4YvWbGHHQfM6FmWBJ-SJsA65yezfSXnA__')] bg-cover bg-center bg-no-repeat font-ubuntu p-4 sm:p-6 lg:p-8"
+      className="min-h-screen w-full flex items-center justify-center lg:justify-end bg-[url('https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/6eeb/d522/eebcb06a93a708321dc86db398604082?Expires=1763337600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hwqvYqdQpnZu5vaFJo2Sr2SZHtV9WARXbAh41t8809xP4rKSXU7kMWoIbWVsXlEnVqZl8LOs61BEDMVjNOVKyrjjpwsCo1EESvMcxAxGRa5U7Uzc8DABW-EKQIDSzryw3OMO~ihBY5kKhzvpngo~~vVBpTnJQ3KCe7HYiHGU53HFU0soYJOdLPW6QF3gGWX1rw7eOPBzY6kaXRg~9GmACtnasjzZjzgY-256ZL3j0OinAfhBQRYPJz7~l0qt5LTE~yRG3s2i444OEj0qdzxaPNCr4bRSbsZoyrGkT1OVdjx~lKxzbBHAvQ4YvWbGHHQfM6FmWBJ-SJsA65yezfSXnA__')] bg-cover bg-center bg-no-repeat font-ubuntu p-4 sm:p-6 lg:p-8"
     >
-      <div className="w-full lg:w-1/2 lg:mr-20 xl:mr-32">
+      <div className="w-full lg:w-1/2 lg:mr-28 xl:mr-48">
         <Login />
       </div>
     </div>

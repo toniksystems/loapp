@@ -34,37 +34,37 @@ const requests = [
 const StatusBadge = ({ status }: { status: 'Approved' | 'Rejected' }) => {
     const isApproved = status === 'Approved';
     return (
-        <div className={`flex items-center justify-center gap-1 px-2.5 py-1 rounded-full text-white ${isApproved ? 'bg-nimasa-green' : 'bg-nimasa-red'}`}>
-            {isApproved ? <CheckCircle2 size={12} /> : <XCircle size={12} />}
-            <span className="font-medium text-xs">{status}</span>
+        <div className={`flex items-center justify-center gap-2.5 px-5 py-2 rounded-full text-white ${isApproved ? 'bg-nimasa-green' : 'bg-nimasa-red'}`}>
+            {isApproved ? <CheckCircle2 size={18} /> : <XCircle size={18} />}
+            <span className="font-medium text-lg">{status}</span>
         </div>
     );
 };
 
 const MyRequests = () => {
     return (
-        <div className="bg-white rounded-2xl shadow-md p-4">
-            <h2 className="text-lg font-medium text-nimasa-dark-text mb-4">My Requests</h2>
+        <div className="bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-medium text-nimasa-dark-text mb-8">My Requests</h2>
             <div className="overflow-x-auto">
-                <div className="min-w-[500px]">
+                <div className="min-w-[700px]">
                     {/* Table Header */}
-                    <div className="grid grid-cols-12 gap-4 px-4 pb-3 text-xs font-medium text-gray-500 uppercase">
+                    <div className="grid grid-cols-12 gap-5 px-5 pb-5 text-lg font-medium text-gray-500 uppercase">
                         <div className="col-span-3">Leave Type</div>
                         <div className="col-span-5">Description</div>
                         <div className="col-span-2 text-center">Date</div>
                         <div className="col-span-2 text-center">Status</div>
                     </div>
                     {/* Table Body */}
-                    <div className="space-y-3">
+                    <div className="space-y-6">
                         {requests.map((req, index) => (
-                            <div key={index} className="border-t border-gray-100 pt-3">
-                                <div className="grid grid-cols-12 gap-4 items-center px-4">
-                                    <div className="col-span-3 flex items-center gap-2 text-xs">
-                                        <req.icon size={16} className="text-gray-700 flex-shrink-0" />
+                            <div key={index} className="border-t border-gray-100 pt-6">
+                                <div className="grid grid-cols-12 gap-5 items-center px-5">
+                                    <div className="col-span-3 flex items-center gap-5 text-lg">
+                                        <req.icon size={24} className="text-gray-700 flex-shrink-0" />
                                         <span>{req.type}</span>
                                     </div>
-                                    <div className="col-span-5 text-[11px] text-gray-600">{req.description}</div>
-                                    <div className="col-span-2 text-xs text-gray-600 text-center">{req.date}</div>
+                                    <div className="col-span-5 text-base text-gray-600">{req.description}</div>
+                                    <div className="col-span-2 text-lg text-gray-600 text-center">{req.date}</div>
                                     <div className="col-span-2 flex justify-center">
                                         <StatusBadge status={req.status as 'Approved' | 'Rejected'} />
                                     </div>

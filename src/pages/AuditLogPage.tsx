@@ -6,8 +6,8 @@ import { fullAuditLogs } from '../data/fullAuditLogData';
 const AuditLogPage = () => {
   return (
     <AdminLayout>
-      <h1 className="text-xl md:text-2xl font-bold text-nimasa-dark-text mb-6">Audit Log</h1>
-      <div className="bg-white rounded-2xl shadow-lg p-5">
+      <h1 className="text-2xl md:text-3xl font-bold text-nimasa-dark-text mb-10">Audit Log</h1>
+      <div className="bg-white rounded-2xl shadow-lg p-8">
         <AuditLogFilters />
         <AuditLogTable logs={fullAuditLogs} />
       </div>

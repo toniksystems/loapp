@@ -2,11 +2,11 @@ import ReactECharts from 'echarts-for-react';
 
 const LegendItem = ({ color, label, value }: { color: string, label: string, value: string }) => (
     <div className="flex justify-between items-center">
-        <div className="flex items-center gap-2">
-            <div className={`h-3 w-3 rounded-full ${color}`}></div>
-            <span className="text-sm font-medium text-nimasa-dark-text">{label}</span>
+        <div className="flex items-center gap-2.5">
+            <div className={`h-3.5 w-3.5 rounded-full ${color}`}></div>
+            <span className="text-base font-medium text-nimasa-dark-text">{label}</span>
         </div>
-        <span className="text-sm font-medium text-nimasa-dark-text">{value}</span>
+        <span className="text-base font-medium text-nimasa-dark-text">{value}</span>
     </div>
 );
 
@@ -27,14 +27,14 @@ const ReportCharts = () => {
             data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
             axisLine: { show: true },
             axisTick: { show: false },
-            axisLabel: { color: '#333', fontSize: 10 }
+            axisLabel: { color: '#333', fontSize: 12 }
         },
         yAxis: {
             type: 'value',
             min: 0,
             max: 32,
             interval: 8,
-            axisLabel: { color: '#333', fontSize: 10 },
+            axisLabel: { color: '#333', fontSize: 12 },
             splitLine: {
                 lineStyle: {
                     type: 'dashed'
@@ -47,7 +47,7 @@ const ReportCharts = () => {
                 type: 'line',
                 smooth: true,
                 data: [5, 12, 20, 10, 5, 5, 30, 5, 4, 2],
-                lineStyle: { color: '#1F52DA', width: 2 },
+                lineStyle: { color: '#1F52DA', width: 2.5 },
                 itemStyle: { color: '#1F52DA' },
             }
         ]
@@ -63,12 +63,12 @@ const ReportCharts = () => {
             left: 'center',
             top: 'center',
             textStyle: {
-                fontSize: 28,
+                fontSize: 32,
                 fontWeight: 'bold',
                 color: '#333333'
             },
             subtextStyle: {
-                fontSize: 14,
+                fontSize: 16,
                 color: '#333333'
             }
         },
@@ -99,19 +99,19 @@ const ReportCharts = () => {
     ];
 
     return (
-        <div className="bg-white rounded-2xl shadow-lg p-5">
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
+        <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
                 <div className="lg:col-span-3">
-                    <h3 className="text-lg md:text-xl font-medium text-nimasa-dark-text">Departmental Leave Utilization</h3>
-                    <p className="text-sm text-gray-600 mb-4">Monthly breakdown of leave days (Jan - Oct 2025)</p>
-                    <ReactECharts option={lineChartOption} style={{ height: '280px' }} />
+                    <h3 className="text-xl md:text-2xl font-medium text-nimasa-dark-text">Departmental Leave Utilization</h3>
+                    <p className="text-base text-gray-600 mb-5">Monthly breakdown of leave days (Jan - Oct 2025)</p>
+                    <ReactECharts option={lineChartOption} style={{ height: '320px' }} />
                 </div>
                 <div className="lg:col-span-2 flex flex-col items-center">
-                    <h3 className="text-lg md:text-xl font-medium text-nimasa-dark-text mb-4">Leave Type Breakdown</h3>
-                    <div className="relative w-full" style={{height: '200px'}}>
+                    <h3 className="text-xl md:text-2xl font-medium text-nimasa-dark-text mb-5">Leave Type Breakdown</h3>
+                    <div className="relative w-full" style={{height: '220px'}}>
                         <ReactECharts option={donutChartOption} style={{ height: '100%' }} />
                     </div>
-                    <div className="w-full mt-4 space-y-2">
+                    <div className="w-full mt-6 space-y-3">
                         {legendData.map(item => (
                             <LegendItem key={item.label} color={item.color} label={item.label} value={item.value} />
                         ))}
